@@ -1,0 +1,70 @@
+{
+  "name": "opencode-wakeup",
+  "version": "0.1.1",
+  "description": "Persistent wakeup scheduling plugin for opencode sessions.",
+  "author": "toninho09",
+  "homepage": "https://github.com/toninho09/opencode-wakeup#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toninho09/opencode-wakeup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toninho09/opencode-wakeup/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./tui": {
+      "types": "./dist/tui.d.ts",
+      "default": "./dist/tui.tsx"
+    }
+  },
+  "oc-plugin": [
+    "server",
+    "tui"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/prepare-tui-dist.mjs",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "schedule",
+    "wakeup",
+    "tui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@opentui/core": "^0.3.4",
+    "@opentui/keymap": "^0.3.4",
+    "@opentui/solid": "^0.3.4",
+    "solid-js": "^1.9.12"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.17.2",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": "^1.17.2"
+  }
+}
