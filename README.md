@@ -1,9 +1,9 @@
-# opencode-wakeup
+# @toninho09/opencode-wakeup
 
 Schedule a future prompt back into the current opencode session.
 
-[![npm](https://img.shields.io/npm/v/opencode-wakeup?style=flat-square)](https://www.npmjs.com/package/opencode-wakeup)
-[![npm downloads](https://img.shields.io/npm/dm/opencode-wakeup?style=flat-square)](https://www.npmjs.com/package/opencode-wakeup)
+[![npm](https://img.shields.io/npm/v/%40toninho09%2Fopencode-wakeup?style=flat-square)](https://www.npmjs.com/package/@toninho09/opencode-wakeup)
+[![npm downloads](https://img.shields.io/npm/dm/%40toninho09%2Fopencode-wakeup?style=flat-square)](https://www.npmjs.com/package/@toninho09/opencode-wakeup)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
 
 Use `wakeup_after` or `wakeup_at` to tell opencode to wake itself up after a delay or at a specific time. When the timer fires the plugin sends a prompt back into the same session, so opencode can resume work — checking a deploy, retrying a build, polling an external process, or anything else that needs a future nudge.
@@ -13,7 +13,7 @@ Use `wakeup_after` or `wakeup_at` to tell opencode to wake itself up after a del
 ## Install
 
 ```sh
-npm install opencode-wakeup
+npm install @toninho09/opencode-wakeup
 ```
 
 Add the server plugin to `opencode.json` (or `opencode.jsonc`):
@@ -21,7 +21,7 @@ Add the server plugin to `opencode.json` (or `opencode.jsonc`):
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-wakeup"]
+  "plugin": ["@toninho09/opencode-wakeup"]
 }
 ```
 
@@ -30,7 +30,7 @@ For the **Wakeups sidebar panel**, also add the TUI plugin to `tui.json` (or `tu
 ```json
 {
   "$schema": "https://opencode.ai/tui.json",
-  "plugin": ["opencode-wakeup"]
+  "plugin": ["@toninho09/opencode-wakeup"]
 }
 ```
 
@@ -204,4 +204,4 @@ MIT
 
 ---
 
-> opencode-wakeup is not built by the OpenCode team and is not affiliated with OpenCode.
+> @toninho09/opencode-wakeup is not built by the OpenCode team and is not affiliated with OpenCode.
